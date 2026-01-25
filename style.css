@@ -1,0 +1,513 @@
+:root {
+    --bg-color: #f9f7f2;
+    --text-color: #1a1a1a;
+    --accent-color: #8fa194;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+}
+
+/* ================= HEADER ================= */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 10%;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    text-transform:capitalize;
+}
+
+.sub-logo {
+    display: block;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    margin-top: -5px;
+    text-align: right;
+}
+
+/* NAV */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    opacity: 0.7;
+    position: relative;
+    transition: opacity 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 1px;
+    background-color: var(--text-color);
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse; /* 🔥 FOTO SOL – YAZI SAĞ */
+}
+.hero-image {
+    transform: translateX(-120px);
+}
+
+
+
+.hero-content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 35px;
+    max-width: 450px;
+}
+
+/* CTA BUTTON */
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #7c8f83;
+    transform: translateY(-2px);
+}
+
+/* HERO IMAGE */
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    max-height: 550px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .main-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .hero-content p {
+        margin: 0 auto 35px;
+    }
+
+    .hero-image {
+        text-align: center;
+    }
+}
+/* ================= ÇALIŞMALAR ================= */
+
+.works-section {
+    padding: 100px 10%;
+    background-color: #f9f7f2;
+}
+
+.works-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    margin-bottom: 60px;
+}
+
+.works-list {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.work-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.work-year {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: #777;
+    font-weight: 600;
+}
+
+.work-item p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333
+}
+/* ================= ULUSAL MEDYA ================= */
+
+.media-section {
+    padding: 120px 10% 100px; /* üstten daha fazla boşluk */
+    background-color: #f9f7f2;
+    border-top: 1px solid #e0e0e0; /* ayırıcı çizgi */
+}
+
+.media-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sub-section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
+    margin-bottom: 35px;
+}
+
+.media-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+}
+/* ================= ULUSLARARASI ÇALIŞMALAR ================= */
+
+.international-section {
+    padding: 120px 10% 100px;
+    background-color: #f9f7f2;
+    border-top: 1px solid #e0e0e0;
+}
+
+.international-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.international-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.country-list {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+}
+
+.country-list li {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #777;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+/* ================= KİTAPLAR ================= */
+
+.books-section {
+    padding: 120px 10%;
+    background-color: #f9f7f2;
+}
+
+.books-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.book-item {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.book-cover img {
+    width: 220px;
+    border-radius: 6px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.book-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.book-meta {
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    color: #777;
+}
+/* ================= İŞ TECRÜBELERİ ================= */
+
+.experience-section {
+    padding: 120px 10%;
+    background-color: #f9f7f2;
+}
+
+.experience-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-item {
+    margin-bottom: 70px;
+}
+
+.experience-company {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
+    margin-bottom: 10px;
+}
+
+.experience-meta {
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    color: #777;
+}
+
+/* ================= REFERANSLAR ================= */
+
+.references-section {
+    padding: 120px 10%;
+    background-color: #f9f7f2;
+}
+
+.references-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.references-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.reference-item {
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    color: #333;
+    padding: 18px 20px;
+    border: 1px solid #e5e5e5;
+    background-color: #fff;
+}
+
+.reference-wide {
+    grid-column: 1 / -1;
+}
+/* ================= İLETİŞİM ================= */
+
+.contact-section {
+    padding: 120px 10%;
+    background-color: #f9f7f2;
+}
+
+.contact-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    margin-bottom: 45px;
+}
+
+.contact-label {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.contact-link {
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.contact-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+}
+/* ================= WHATSAPP FLOAT ================= */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    z-index: 9999;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float img {
+    width: 32px;
+    height: 32px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+/* GENEL ARKA PLAN */
+/* === PROFESYONEL PROFİL BÖLÜMÜ === */
+
+.profile-section {
+  background: #2f2f2f;   /* düz koyu gri */
+  padding: 100px 24px;
+}
+
+.profile-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* BAŞLIK */
+.profile-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+/* ÜST AÇIKLAMA */
+.profile-intro {
+  max-width: 720px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #d6d6d6;
+  margin-bottom: 64px;
+}
+
+/* KART GRID */
+.profile-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+/* TEK KART */
+.profile-card {
+  background: #3a3a3a;   /* blur yok */
+  border-radius: 14px;
+  padding: 28px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* HOVER – ABARTI YOK */
+.profile-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* KART BAŞLIK */
+.profile-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+/* KART METİN */
+.profile-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #cfcfcf;
+}
