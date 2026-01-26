@@ -600,18 +600,20 @@ nav a:hover::after {
     bottom: 16px;
   }
 }
-/* 🔧 MOBIL FIX – SADECE KAYMAYI DURDURUR */
+/* 🚑 MOBIL TAŞMA KESİN ÇÖZÜM */
 @media (max-width: 768px){
-  .hero-image{
-    transform: none !important;
-    margin: 0 auto;
-  }
 
   .hero-container{
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    width: 100%;
+  }
+
+  .hero{
+    overflow-x: hidden;
   }
 }
+
 
 
 
