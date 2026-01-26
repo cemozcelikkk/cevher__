@@ -600,3 +600,18 @@ nav a:hover::after {
     bottom: 16px;
   }
 }
+/* 🔧 MOBIL FIX – SADECE KAYMAYI DURDURUR */
+@media (max-width: 768px){
+  .hero-image{
+    transform: none !important;
+    margin: 0 auto;
+  }
+
+  .hero-container{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+
+
